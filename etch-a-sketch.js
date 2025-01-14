@@ -1,6 +1,7 @@
-const gridSquare = document.createElement('div')
-const gridContainer = document.querySelector('.flex-container')
+const gridContainer = document.querySelector('.flex-container');
 
-for (i = 1; i < 256; i++) {
-    gridContainer.appendChild(gridSquare);
+for (let i = 1; i <= 256; i++) {
+    const gridSquare = document.createElement('div');
+    gridContainer.appendChild(gridSquare)
+    gridSquare.setAttribute('class', 'grid-item')
 }
