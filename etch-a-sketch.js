@@ -1,9 +1,16 @@
 const gridContainer = document.querySelector('.flex-container');
 let gridSquares = document.querySelectorAll('.grid-item');
 
+function getRandomHex(){
+    return (Math.random() * 255)
+}
+
 function changeColor(e){
     let event = e.target;
-    let attribute = event.getAttribute('class');
+
+    let red = getRandomHex();
+    let green = getRandomHex();
+    let blue = getRandomHex();
 
     if(  !(attribute.includes('color-changed') )  ){
         attribute += ' color-changed';
@@ -27,8 +34,7 @@ function buildGrid(number){
 
 buildGrid(numberGiven)
 
-//TODAY'S TASK: ADD EVENT LISTENER TO BUTTON
-//(CHECK ETCH A SKETCH T.O.P PROJECT PAGE STEP 4)
+//TASK: make grid tiles display random colors as the cursor hovers
 
 function changeSize(){
     let squareSize = 101;
