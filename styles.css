@@ -4,15 +4,19 @@
     height: 25px;
 }
 .flex-container {
+    box-sizing: border-box;
     display: flex;
-    width: 980px;
-    border: rgb(254, 108, 108) solid 2px;
+    width: 972px;
+    height: 972px;
+    border: rgb(254, 80, 108) solid 4px;
     flex-wrap: wrap;
     justify-content: center;
-    padding-block: 20px;
+    align-content: center;
     margin-inline: auto;
+    margin-bottom: 50px;
 }
 .grid-item {
+    box-sizing: border-box;
     width: 60px;
     height: 60px;
     background-color: #ffC0a0;
