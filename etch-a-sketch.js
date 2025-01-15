@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector('.flex-container');
+let gridSquares = document.querySelectorAll('.grid-item');
 
 function changeColor(e){
     let event = e.target;
@@ -10,15 +11,21 @@ function changeColor(e){
     }
 }
 
+let index = 1;
+let numberGiven = 256; 
 
+function buildGrid(number){
 
-    for (let i = 1; i <= 256; i++) {
+    for (index = 1; index <= number; index++) {
         const gridSquare = document.createElement('div');
         gridContainer.appendChild(gridSquare)
         gridSquare.setAttribute('class', 'grid-item')
         gridSquare.addEventListener('mouseover', changeColor)
         gridSquares = document.querySelectorAll('.grid-item')
     }
+}
+
+buildGrid(numberGiven)
 
 //TODAY'S TASK: ADD EVENT LISTENER TO BUTTON
 //(CHECK ETCH A SKETCH T.O.P PROJECT PAGE STEP 4)
