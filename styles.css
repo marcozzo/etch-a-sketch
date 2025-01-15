@@ -1,20 +1,25 @@
+.gridbutton{
+    margin: 20px auto;
+    display: block;
+    height: 25px;
+}
 .flex-container {
     display: flex;
-    width: 840px;
-    border: black solid 2px;
+    width: 980px;
+    border: rgb(254, 108, 108) solid 2px;
     flex-wrap: wrap;
     justify-content: center;
     padding-block: 20px;
+    margin-inline: auto;
 }
 .grid-item {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: #ffC0a0;
     flex-shrink: 0;
     border-left: dotted 1px coral;
     border-bottom: dotted 1px coral;
 }
-
 div > .color-changed {
     background-color: rgb(194, 34, 34);
 }
