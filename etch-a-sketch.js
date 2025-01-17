@@ -8,14 +8,11 @@ function getRandomHex(){
 function changeColor(e){
     let event = e.target;
 
-    let red = getRandomHex();
-    let green = getRandomHex();
-    let blue = getRandomHex();
+    let red = getRandomHex().toFixed();
+    let green = getRandomHex().toFixed();
+    let blue = getRandomHex().toFixed();
 
-    if(  !(attribute.includes('color-changed') )  ){
-        attribute += ' color-changed';
-        event.setAttribute('class', attribute)
-    }
+    event.style.backgroundColor = `rgb(${red},${blue},${green})`
 }
 
 let index = 1;
@@ -28,8 +25,8 @@ function buildGrid(number){
         gridContainer.appendChild(gridSquare)
         gridSquare.setAttribute('class', 'grid-item')
         gridSquare.addEventListener('mouseover', changeColor)
-        gridSquares = document.querySelectorAll('.grid-item');
     }
+    gridSquares = document.querySelectorAll('.grid-item');
 }
 
 buildGrid(numberGiven)
